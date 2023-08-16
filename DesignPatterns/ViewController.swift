@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if let theme = UserSettings.shared.string(forKey: "Theme") {
+            print("Theme: \(theme)")
+        }
     }
 
 
