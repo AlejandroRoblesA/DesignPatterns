@@ -19,4 +19,8 @@ final class UserSettings {
     public func int(forKey key: String) -> Int? {
         return settings[key] as? Int
     }
+    
+    public func set(value: Any, forKey key: String) {
+        settings[key] = value
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A9074B322A8EAB5C005737CC /* DesignPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9074B312A8EAB5C005737CC /* DesignPatternsTests.swift */; };
+		A9074B3B2A8EABE5005737CC /* UserSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9074B3A2A8EABE5005737CC /* UserSettingsTests.swift */; };
 		A9B9D5222A8B3061006EF785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D5212A8B3061006EF785 /* AppDelegate.swift */; };
 		A9B9D5242A8B3061006EF785 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D5232A8B3061006EF785 /* SceneDelegate.swift */; };
 		A9B9D5262A8B3061006EF785 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D5252A8B3061006EF785 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		A9074B2F2A8EAB5C005737CC /* DesignPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9074B312A8EAB5C005737CC /* DesignPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsTests.swift; sourceTree = "<group>"; };
+		A9074B3A2A8EABE5005737CC /* UserSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTests.swift; sourceTree = "<group>"; };
 		A9B9D51E2A8B3061006EF785 /* DesignPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B9D5212A8B3061006EF785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9B9D5232A8B3061006EF785 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +64,26 @@
 		A9074B302A8EAB5C005737CC /* DesignPatternsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A9074B382A8EABAE005737CC /* Singleton */,
 				A9074B312A8EAB5C005737CC /* DesignPatternsTests.swift */,
 			);
 			path = DesignPatternsTests;
+			sourceTree = "<group>";
+		};
+		A9074B382A8EABAE005737CC /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				A9074B392A8EABBB005737CC /* UserSettings */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		A9074B392A8EABBB005737CC /* UserSettings */ = {
+			isa = PBXGroup;
+			children = (
+				A9074B3A2A8EABE5005737CC /* UserSettingsTests.swift */,
+			);
+			path = UserSettings;
 			sourceTree = "<group>";
 		};
 		A9B9D5152A8B3061006EF785 = {
@@ -218,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9074B322A8EAB5C005737CC /* DesignPatternsTests.swift in Sources */,
+				A9074B3B2A8EABE5005737CC /* UserSettingsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
