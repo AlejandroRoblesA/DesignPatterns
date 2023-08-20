@@ -32,6 +32,7 @@
 		A9074B2F2A8EAB5C005737CC /* DesignPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9074B312A8EAB5C005737CC /* DesignPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsTests.swift; sourceTree = "<group>"; };
 		A9074B3A2A8EABE5005737CC /* UserSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTests.swift; sourceTree = "<group>"; };
+		A95C9A7C2A91C6EE00821B77 /* Prototype.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Prototype.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A9B9D51E2A8B3061006EF785 /* DesignPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B9D5212A8B3061006EF785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9B9D5232A8B3061006EF785 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +87,14 @@
 			path = UserSettings;
 			sourceTree = "<group>";
 		};
+		A95C9A7B2A91C6C300821B77 /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				A95C9A7C2A91C6EE00821B77 /* Prototype.playground */,
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
 		A9B9D5152A8B3061006EF785 = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				A9C420032A8C83C10074AE2A /* Singleton */,
-				A9B9D5212A8B3061006EF785 /* AppDelegate.swift */,
+				A95C9A7B2A91C6C300821B77 /* Prototype */,
 				A9B9D5232A8B3061006EF785 /* SceneDelegate.swift */,
+				A9B9D5212A8B3061006EF785 /* AppDelegate.swift */,
 				A9B9D5252A8B3061006EF785 /* ViewController.swift */,
 				A9B9D5272A8B3061006EF785 /* Main.storyboard */,
 				A9B9D52A2A8B3062006EF785 /* Assets.xcassets */,
