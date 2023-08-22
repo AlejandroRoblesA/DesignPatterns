@@ -19,16 +19,15 @@ class Contact: NSCopying {
     }
     
     public func copy(with zone: NSZone? = nil) -> Any {
-        return Contact(firstName: self.firstName, lastName: self.lastName, address: Address(street: "", city: "", zip: ""))
+        return Contact(firstName: self.firstName, lastName: self.lastName, address: self.address)
     }
     
     func clone() -> Contact {
-        guard let copy = self.copy() as? Contact else { return Contact(firstName: "", lastName: "", address: Address(street: "", city: "", zip: ""))}
-        return copy
+        return Contact(firstName: self.firstName, lastName: self.lastName, address: self.address.copy() as! Address)
     }
 }
 
-class Address {
+class Address: NSCopying {
     var street: String
     var city: String
     var zip: String
@@ -38,6 +37,10 @@ class Address {
         self.city = city
         self.zip = zip
     }
+    
+    public func copy(with zone: NSZone? = nil) -> Any {
+        return Address(street: self.street, city: self.city, zip: self.city)
+    }
 }
 
 protocol CustomStringConvertible {
@@ -46,17 +49,28 @@ protocol CustomStringConvertible {
 
 extension Contact: CustomStringConvertible {
     var description: String {
-       return "Contact(firstName: \"\(firstName)\", lastName: \"\(lastName)\")"
+       return "Contact(firstName: \"\(firstName)\", lastName: \"\(lastName)\"), address: \"\(address)\")"
     }
 }
 
-var john = Contact(firstName: "John", lastName: "Appleseed", address: Address(street: "", city: "", zip: ""))
+extension Address: CustomStringConvertible {
+    var description: String {
+        return "Street: \"\(street)\", City: \"\(city)\", zip: \"\(zip)\""
+    }
+}
+
+var john = Contact(firstName: "John", lastName: "Appleseed", address: Address(street: "1, Infinite Loop",
+                                                                              city: "Cupertino",
+                                                                              zip: "95014"))
 var bob = john.clone()
 
 dump("\(john), \(bob)")
 
 bob.firstName = "Bob"
 bob.lastName = "Burger"
+bob.address.city = "Los Angeles"
+bob.address.street = "2700, N Vermont Ave"
+bob.address.zip = "90027"
 
 dump("\(john), \(bob)")
 
