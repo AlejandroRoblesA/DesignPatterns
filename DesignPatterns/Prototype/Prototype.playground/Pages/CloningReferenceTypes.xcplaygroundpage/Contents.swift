@@ -15,3 +15,24 @@ class Contact {
         self.lastName = lastName
     }
 }
+
+protocol CustomStringConvertible {
+    var description: String { get }
+}
+
+extension Contact: CustomStringConvertible {
+    var description: String {
+       return "Contact(firstName: \"\(firstName)\", lastName: \"\(lastName)\")"
+    }
+}
+
+var john = Contact(firstName: "John", lastName: "Appleseed")
+var bob = john
+
+dump("\(john), \(bob)")
+
+bob.firstName = "Bob"
+bob.lastName = "Burger"
+
+dump("\(john), \(bob)")
+
