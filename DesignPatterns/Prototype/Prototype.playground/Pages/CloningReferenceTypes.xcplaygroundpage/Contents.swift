@@ -19,6 +19,11 @@ class Contact: NSCopying {
     public func copy(with zone: NSZone? = nil) -> Any {
         return Contact(firstName: self.firstName, lastName: self.lastName)
     }
+    
+    func clone() -> Contact {
+        guard let copy = self.copy() as? Contact else { return Contact(firstName: "", lastName: "")}
+        return copy
+    }
 }
 
 protocol CustomStringConvertible {
@@ -32,7 +37,7 @@ extension Contact: CustomStringConvertible {
 }
 
 var john = Contact(firstName: "John", lastName: "Appleseed")
-var bob = john.copy() as! Contact
+var bob = john.clone()
 
 dump("\(john), \(bob)")
 
