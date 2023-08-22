@@ -10,19 +10,33 @@ class Contact: NSCopying {
     
     var firstName: String
     var lastName: String
+    var address: Address
     
-    init(firstName: String, lastName: String) {
+    init(firstName: String, lastName: String, address: Address) {
         self.firstName = firstName
         self.lastName = lastName
+        self.address = address
     }
     
     public func copy(with zone: NSZone? = nil) -> Any {
-        return Contact(firstName: self.firstName, lastName: self.lastName)
+        return Contact(firstName: self.firstName, lastName: self.lastName, address: Address(street: "", city: "", zip: ""))
     }
     
     func clone() -> Contact {
-        guard let copy = self.copy() as? Contact else { return Contact(firstName: "", lastName: "")}
+        guard let copy = self.copy() as? Contact else { return Contact(firstName: "", lastName: "", address: Address(street: "", city: "", zip: ""))}
         return copy
+    }
+}
+
+class Address {
+    var street: String
+    var city: String
+    var zip: String
+    
+    init(street: String, city: String, zip: String) {
+        self.street = street
+        self.city = city
+        self.zip = zip
     }
 }
 
@@ -36,7 +50,7 @@ extension Contact: CustomStringConvertible {
     }
 }
 
-var john = Contact(firstName: "John", lastName: "Appleseed")
+var john = Contact(firstName: "John", lastName: "Appleseed", address: Address(street: "", city: "", zip: ""))
 var bob = john.clone()
 
 dump("\(john), \(bob)")
